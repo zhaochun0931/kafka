@@ -8,8 +8,15 @@ bin/kafka-storage.sh format --standalone -t $KAFKA_CLUSTER_ID -c config/kraft/re
 bin/kafka-server-start.sh config/kraft/reconfig-server.properties
 
 
-# start zookeeper
+# start zookeeper service
 bin/zookeeper-server-start.sh config/zookeeper.properties
+
+# Start the Kafka broker service
+bin/kafka-server-start.sh config/server.properties
+
+
+
+
 
 
 
