@@ -4,6 +4,10 @@ docker exec --workdir /opt/kafka/bin/ -it broker bash
 
 ./kafka-topics.sh --bootstrap-server localhost:9092 --create --topic test-topic
 
+
+# open one terminal 
 ./kafka-console-producer.sh --bootstrap-server localhost:9092 --topic test-topic
 
+
+# open another terminal
 ./kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test-topic --from-beginning
